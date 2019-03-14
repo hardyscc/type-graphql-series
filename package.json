@@ -15,12 +15,14 @@
     "graphql": "^14.1.1",
     "graphql-query-complexity": "^0.2.3",
     "ioredis": "^4.6.2",
+    "mssql": "^5.0.2",
     "nodemailer": "^5.1.1",
     "pg": "^7.8.2",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^0.17.0",
-    "typeorm": "^0.2.14",
-    "uuid": "^3.3.2"
+    "typeorm": "file:../typeorm/build/package",
+    "uuid": "^3.3.2",
+    "jdbc": "Hafas/node-jdbc"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
