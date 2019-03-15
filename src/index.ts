@@ -3,11 +3,18 @@ import connectRedis from "connect-redis";
 import cors from "cors";
 import Express from "express";
 import session from "express-session";
+// @ts-ignore
+import jinst from "jdbc/lib/jinst";
 import "reflect-metadata";
-import { formatArgumentValidationError } from "type-graphql";
+// import { formatArgumentValidationError } from "type-graphql";
 import { createConnection } from "typeorm";
 import { redis } from "./redis";
 import { createSchema } from "./utils/createSchema";
+
+if (!jinst.isJvmCreated()) {
+  jinst.addOption("-Xrs");
+  jinst.setupClasspath(["./drivers/jconn3.jar"]);
+}
 
 const main = async () => {
   await createConnection();
@@ -16,7 +23,7 @@ const main = async () => {
 
   const apolloServer = new ApolloServer({
     schema,
-    formatError: formatArgumentValidationError as any,
+    // formatError: formatArgumentValidationError as any,
     context: ({ req, res }: any) => ({
       req,
       res

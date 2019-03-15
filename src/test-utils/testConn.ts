@@ -8,7 +8,7 @@ export const testConn = (drop: boolean = false) => {
     port: 1433,
     username: "SA",
     password: "pms1eds2",
-    database: "phs_db",
+    database: "master",
     logging: true,
     synchronize: drop,
     dropSchema: drop,
