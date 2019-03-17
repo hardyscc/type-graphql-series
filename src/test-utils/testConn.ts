@@ -5,13 +5,17 @@ export const testConn = (drop: boolean = false) => {
     name: "default",
     type: "sybase",
     host: "localhost",
-    port: 1433,
-    username: "SA",
-    password: "pms1eds2",
+    port: 5000,
+    username: "sa",
+    password: "myPassword",
+    domain: "MYSYBASE",
     database: "master",
     logging: true,
     synchronize: drop,
     dropSchema: drop,
-    entities: [__dirname + "/../entity/*.*"]
+    entities: [__dirname + "/../entity/*.*"],
+    options: {
+      disableOutputReturning: true
+    }
   });
 };

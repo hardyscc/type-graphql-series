@@ -22,7 +22,8 @@
     "type-graphql": "^0.17.0",
     "typeorm": "file:../typeorm/build/package",
     "uuid": "^3.3.2",
-    "jdbc": "Hafas/node-jdbc"
+    "jdbc": "Hafas/node-jdbc",
+    "sybase": "file:../sybase"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
